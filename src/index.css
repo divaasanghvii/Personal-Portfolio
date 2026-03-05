@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-rare-pink: #FDF2F2;
+  --color-rare-blush: #F8E7E7;
+  --color-rare-gold: #D4AF37;
+  --color-rare-ink: #1A1A1A;
+  --color-rare-cream: #FCF9F6;
+}
+
+@layer base {
+  body {
+    @apply bg-rare-cream text-rare-ink font-sans antialiased selection:bg-rare-blush selection:text-rare-ink;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-rare-cream/80 border-b border-rare-blush/50;
+}
+
+.rare-card {
+  @apply bg-white rounded-[2rem] border border-rare-blush/30 shadow-sm hover:shadow-md transition-all duration-500 overflow-hidden;
+}
+
+.rare-button {
+  @apply px-8 py-3 rounded-full bg-rare-ink text-white font-medium hover:bg-rare-ink/90 transition-all duration-300 active:scale-95 disabled:opacity-50;
+}
+
+.rare-button-outline {
+  @apply px-8 py-3 rounded-full border border-rare-ink text-rare-ink font-medium hover:bg-rare-ink hover:text-white transition-all duration-300 active:scale-95;
+}
